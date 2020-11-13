@@ -1,0 +1,17 @@
+{
+    "pets":[{
+        "id":1,
+        "Nome": "Brown",
+        "Apelido":"Gordin",
+        "Raca":"Viralata",
+        "Especie":"Gato",
+        "Dono":"Cleyton",
+        "Telefone":"11940227460"
+    }],
+    "donos":[{
+        "id":1,
+        "Nome": "Cleyton",
+        "Email": "cleytonwide@gmail.com",
+        "Telefone":"11940227460"
+    }]
+}
