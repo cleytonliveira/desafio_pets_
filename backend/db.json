@@ -1,17 +1,28 @@
 {
-    "pets":[{
-        "id":1,
-        "Nome": "Brown",
-        "Apelido":"Gordin",
-        "Raca":"Viralata",
-        "Especie":"Gato",
-        "Dono":"Cleyton",
-        "Telefone":"11940227460"
-    }],
-    "donos":[{
-        "id":1,
-        "Nome": "Cleyton",
-        "Email": "cleytonwide@gmail.com",
-        "Telefone":"11940227460"
-    }]
+  "pets": [
+    {
+      "id": 1,
+      "Nome": "Brown",
+      "Apelido": "Gordin",
+      "Raca": "Viralata",
+      "Especie": "Gato",
+      "idDono": 1
+    },
+    {
+      "Nome": "teste",
+      "Apelido": "teste",
+      "Raca": "teste",
+      "Especie": "Gato",
+      "idDono": 1,
+      "id": 2
+    }
+  ],
+  "donos": [
+    {
+      "id": 1,
+      "Nome": "Cleyton",
+      "Email": "cleytonwide@gmail.com",
+      "Telefone": "11940227460"
+    }
+  ]
 }
