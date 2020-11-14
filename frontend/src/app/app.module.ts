@@ -25,6 +25,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { PetsUpdateComponent } from './component/pets/pets-update/pets-update.component';
 import { PetsDeleteComponent } from './component/pets/pets-delete/pets-delete.component';
+import { DonosCrudComponent } from './views/donos-crud/donos-crud.component';
+import { DonosCreateComponent } from './component/donos/donos-create/donos-create.component';
+import { DonosReadComponent } from './component/donos/donos-read/donos-read.component';
+import { DonosUpdateComponent } from './component/donos/donos-update/donos-update.component';
+import { DonosDeleteComponent } from './component/donos/donos-delete/donos-delete.component';
 
 
 @NgModule({
@@ -38,7 +43,12 @@ import { PetsDeleteComponent } from './component/pets/pets-delete/pets-delete.co
     PetsCreateComponent,
     PetsReadComponent,
     PetsUpdateComponent,
-    PetsDeleteComponent
+    PetsDeleteComponent,
+    DonosCrudComponent,
+    DonosCreateComponent,
+    DonosReadComponent,
+    DonosUpdateComponent,
+    DonosDeleteComponent
   ],
   imports: [
     BrowserModule,
