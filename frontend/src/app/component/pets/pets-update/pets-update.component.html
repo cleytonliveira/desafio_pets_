@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-title>
-        Novo PET
+        Editar PET
     </mat-card-title>
     <form>
         <mat-form-field>
@@ -15,18 +15,11 @@
         <mat-form-field>
             <input matInput placeholder="Espécie" [(ngModel)]="pet.Especie" name="especie" required>
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Dono">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Telefone">
-        </mat-form-field>
     </form>
-    <button mat-raised-button (click)="createPet()" color="primary">
+    <button mat-raised-button (click)="updatePets()" color="primary">
         Salvar
     </button>
     <button mat-raised-button (click)="cancel()" >
         Cancelar
     </button>
 </mat-card>
-

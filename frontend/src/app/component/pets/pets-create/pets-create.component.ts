@@ -11,11 +11,11 @@ import { Router } from '@angular/router';
 export class PetsCreateComponent implements OnInit {
 
   pet: Pet = {
-    Nome:'teste',
-    Apelido:'teste',
-    Raca: 'teste',
-    Especie:'Gato',
-    idDono:1
+    Nome:'',
+    Apelido:'',
+    Raca: '',
+    Especie:'',
+    idDono:null
   }
 
   constructor(private PetsService: PetsService, private router:Router) { }

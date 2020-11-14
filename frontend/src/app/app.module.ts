@@ -16,6 +16,15 @@ import { PetsCrudComponent } from './views/pets-crud/pets-crud.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PetsCreateComponent } from './component/pets/pets-create/pets-create.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { PetsReadComponent } from './component/pets/pets-read/pets-read.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { PetsUpdateComponent } from './component/pets/pets-update/pets-update.component';
+import { PetsDeleteComponent } from './component/pets/pets-delete/pets-delete.component';
 
 
 @NgModule({
@@ -26,7 +35,10 @@ import {HttpClientModule} from '@angular/common/http';
     NavComponent,
     HomeComponent,
     PetsCrudComponent,
-    PetsCreateComponent
+    PetsCreateComponent,
+    PetsReadComponent,
+    PetsUpdateComponent,
+    PetsDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +50,14 @@ import {HttpClientModule} from '@angular/common/http';
     MatButtonModule,
     AppRoutingModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
