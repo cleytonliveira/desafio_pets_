@@ -10,10 +10,10 @@ import { Dono } from '../donos/donos-model';
   providedIn: 'root'
 })
 export class PetsService {
-  baseUrlPets = "http://localhost:3001/pets";
-  baseUrlDonos = "http://localhost:3001/donos";
-  baseUrlRacas = "http://localhost:3001/racas";
-  baseUrlEspecies = "http://localhost:3001/especies";
+  baseUrlPets = "https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/pets";
+  baseUrlDonos = "https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/donos";
+  baseUrlRacas = "https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/racas";
+  baseUrlEspecies = "https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/especies";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
   showMessage(msg: string, isError: Boolean = false): void {

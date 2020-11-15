@@ -21,7 +21,6 @@
         </mat-form-field>
         <mat-form-field>
             <mat-select placeholder="Selecione o Dono(a)" formControlName="Dono">
-                <mat-option [value]=0 >Sem Dono</mat-option>
                 <mat-option *ngFor="let dono of donos | async" [value]="dono.id">{{dono.Nome}}</mat-option>
             </mat-select>
         </mat-form-field>
