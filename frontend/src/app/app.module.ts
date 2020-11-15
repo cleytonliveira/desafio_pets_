@@ -33,6 +33,7 @@ import { DonosDeleteComponent } from './component/donos/donos-delete/donos-delet
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { PetsDetailsComponent } from './component/pets/pets-details/pets-details.component';
+import { DonosDetailsComponent } from './component/donos/donos-details/donos-details.component';
 
 
 
@@ -53,7 +54,8 @@ import { PetsDetailsComponent } from './component/pets/pets-details/pets-details
     DonosReadComponent,
     DonosUpdateComponent,
     DonosDeleteComponent,
-    PetsDetailsComponent
+    PetsDetailsComponent,
+    DonosDetailsComponent
   ],
   imports: [
     BrowserModule,

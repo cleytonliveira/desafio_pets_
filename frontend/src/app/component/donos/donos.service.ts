@@ -4,12 +4,14 @@ import { Dono } from './donos-model';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable } from '@angular/core';
+import { Pet } from '../pets/pets-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DonosService {
   baseUrl = "http://localhost:3001/donos";
+  baseUrlPets = "http://localhost:3001/pets";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
   showMessage(msg: string, isError: Boolean = false): void {
@@ -54,6 +56,16 @@ export class DonosService {
   delete(id: number): Observable<Dono> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<Dono>(url).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  //PETS
+  readPeatsById(id: number):Observable<Pet[]>{
+    const url = `${this.baseUrlPets}/?Dono=${id}`
+    console.log(url)
+    return this.http.get<Pet[]>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );

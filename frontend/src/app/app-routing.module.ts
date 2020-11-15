@@ -11,6 +11,7 @@ import { PetsUpdateComponent } from "./component/pets/pets-update/pets-update.co
 import { PetsDeleteComponent } from "./component/pets/pets-delete/pets-delete.component";
 import { DonosCrudComponent } from './views/donos-crud/donos-crud.component';
 import { DonosCreateComponent } from './component/donos/donos-create/donos-create.component';
+import { DonosDetailsComponent } from './component/donos/donos-details/donos-details.component';
 
 
 const routes: Routes = [
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     path:'donos/delete/:id',
     component:DonosDeleteComponent
+  },
+  {
+    path:'donos/details/:id',
+    component:DonosDetailsComponent
   }
 ];
 

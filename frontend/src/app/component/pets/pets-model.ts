@@ -4,7 +4,7 @@ export interface Pet{
     Apelido:string,
     Raca:string,
     Especie:string,
-    Dono:string
+    Dono:number
 }
 
 export interface Raca{
