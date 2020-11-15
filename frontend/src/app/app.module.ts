@@ -30,6 +30,7 @@ import { DonosCreateComponent } from './component/donos/donos-create/donos-creat
 import { DonosReadComponent } from './component/donos/donos-read/donos-read.component';
 import { DonosUpdateComponent } from './component/donos/donos-update/donos-update.component';
 import { DonosDeleteComponent } from './component/donos/donos-delete/donos-delete.component';
+import { ReactiveFormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { DonosDeleteComponent } from './component/donos/donos-delete/donos-delet
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

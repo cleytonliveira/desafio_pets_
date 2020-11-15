@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { DonosService } from './../donos.service';
-import { Dono } from './../donos-model';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-donos-create',
@@ -9,23 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./donos-create.component.css']
 })
 export class DonosCreateComponent implements OnInit {
-  dono:Dono ={
-    Nome:'',
-    Email:'',
-    Telefone:null
-  }
-  constructor(private donosService:DonosService, private router:Router) { }
+
+  formDono: FormGroup;
+
+  constructor(private donosService:DonosService, private router:Router,private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.configForm();
+  }
+
+  configForm(){
+    this.formDono =  this.formBuilder.group({
+      Nome:[null,Validators.required],
+      Email:[null,[Validators.required, Validators.email]],
+      Telefone:[null,Validators.required]
+    })
   }
 
   createDono():void{
-    this.donosService.create(this.dono).subscribe(()=>{
+    this.donosService.create(this.formDono.value).subscribe(()=>{
       this.donosService.showMessage("Dono cadastrado!")
       this.router.navigate(['donos']);
     })
   }
-
+  
   cancel():void{
     this.router.navigate(['donos'])
   }
