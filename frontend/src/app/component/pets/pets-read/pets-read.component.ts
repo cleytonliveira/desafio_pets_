@@ -13,20 +13,14 @@ import { MatTableDataSource } from '@angular/material/table';
 export class PetsReadComponent implements OnInit {
   pets: Pet[];
   dono: Dono;
-  displayedColumns=['id','Nome','Apelido','Raca','Especie','Dono','Telefone','action'];
+  displayedColumns=['id','Nome','Apelido','Raca','Especie','action'];
   constructor(private PetsService: PetsService) { }
 
   ngOnInit(): void {
+    
     this.PetsService.read().subscribe(pets=>{
-      this.pets = pets;
-    })
-  }
-
-  searchDono(id: number){
-    this.PetsService.readDonoId(id).subscribe(dono=>{
-      this.dono = dono;
-      console.log(dono)
-      return dono;
-    })
-  }
+      this.pets = pets
+      })   
+    }
+    
 }
