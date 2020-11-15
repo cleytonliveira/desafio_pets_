@@ -1,3 +1,4 @@
+import { PetsDetailsComponent } from './component/pets/pets-details/pets-details.component';
 import { DonosDeleteComponent } from './component/donos/donos-delete/donos-delete.component';
 import { DonosUpdateComponent } from './component/donos/donos-update/donos-update.component';
 import { PetsCreateComponent } from './component/pets/pets-create/pets-create.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: "pets/delete/:id",
     component: PetsDeleteComponent
+  },
+  {
+    path:"pets/details/:id",
+    component:PetsDetailsComponent
   },
   {
     path: "donos",

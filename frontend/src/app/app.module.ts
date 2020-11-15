@@ -32,6 +32,7 @@ import { DonosUpdateComponent } from './component/donos/donos-update/donos-updat
 import { DonosDeleteComponent } from './component/donos/donos-delete/donos-delete.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import { PetsDetailsComponent } from './component/pets/pets-details/pets-details.component';
 
 
 
@@ -51,7 +52,8 @@ import {MatSelectModule} from '@angular/material/select';
     DonosCreateComponent,
     DonosReadComponent,
     DonosUpdateComponent,
-    DonosDeleteComponent
+    DonosDeleteComponent,
+    PetsDetailsComponent
   ],
   imports: [
     BrowserModule,
