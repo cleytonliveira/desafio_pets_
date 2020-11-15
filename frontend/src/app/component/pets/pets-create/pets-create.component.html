@@ -10,17 +10,17 @@
             <input matInput placeholder="Apelido" formControlName="Apelido" required>
         </mat-form-field>
         <mat-form-field>
-            <mat-select placeholder="Selecione a Raça" [attr.disabled]="state ? '' : null" formControlName="Raca">
+            <mat-select placeholder="Selecione a Raça"  formControlName="Raca">
                 <mat-option *ngFor="let raca of racas | async" [value]="raca.Nome">{{raca.Nome}}</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field>
-            <mat-select placeholder="Selecione a Espécie" [attr.disabled]="state ? '' : null" formControlName="Especie">
+            <mat-select placeholder="Selecione a Espécie" formControlName="Especie">
                 <mat-option *ngFor="let especie of especies | async" [value]="especie.Nome">{{especie.Nome}}</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field>
-            <mat-select placeholder="Selecione o Dono(a)" [attr.disabled]="state ? '' : null" formControlName="Dono">
+            <mat-select placeholder="Selecione o Dono(a)" formControlName="Dono">
                 <mat-option [value]=0 >Sem Dono</mat-option>
                 <mat-option *ngFor="let dono of donos | async" [value]="dono.id">{{dono.Nome}}</mat-option>
             </mat-select>
