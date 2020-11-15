@@ -1,7 +1,7 @@
 .header{
     display: flex;
     align-items: center;
-    background: rgba(0,0,0,.26);
+    background: rgba(73,68,64,.95);
 }
 
 .header a {
@@ -20,4 +20,8 @@
 
 .header .title-group i{
     padding-right: 5px;;
+}
+
+.title-group a{
+    color:#fff;
 }

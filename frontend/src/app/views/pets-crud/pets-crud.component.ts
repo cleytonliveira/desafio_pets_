@@ -12,7 +12,7 @@ export class PetsCrudComponent implements OnInit {
   constructor(private router: Router, private headerService: HeaderService) {
 
     headerService.headerData = {
-      title: 'Cadastrar PET',
+      title: 'Gerenciar Pets',
       icon: 'pets',
       routeUrl: '/pets'
 

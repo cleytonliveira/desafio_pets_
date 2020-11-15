@@ -11,7 +11,7 @@ export class DonosCrudComponent implements OnInit {
 
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
-      title: 'Cadastrar Dono',
+      title: 'Gerenciar Donos',
       icon: 'person_outline',
       routeUrl: '/donos'
     }
