@@ -4,5 +4,15 @@ export interface Pet{
     Apelido:string,
     Raca:string,
     Especie:string,
-    idDono:number
+    Dono:number
+}
+
+export interface Raca{
+    id?:number,
+    Nome:string
+}
+
+export interface Especie{
+    id?:number,
+    Nome:string
 }

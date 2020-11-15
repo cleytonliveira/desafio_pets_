@@ -1,6 +1,8 @@
+import { Dono } from './../../donos/donos-model';
 import { PetsService } from './../pets.service';
 import { Component, OnInit } from '@angular/core';
 import { Pet } from './../pets-model';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-pets-read',
@@ -10,7 +12,8 @@ import { Pet } from './../pets-model';
 
 export class PetsReadComponent implements OnInit {
   pets: Pet[];
-  displayedColumns=['id','Nome','Apelido','Raca','Especie','idDono','action'];
+  dono: Dono;
+  displayedColumns=['id','Nome','Apelido','Raca','Especie','Dono','Telefone','action'];
   constructor(private PetsService: PetsService) { }
 
   ngOnInit(): void {
@@ -19,4 +22,11 @@ export class PetsReadComponent implements OnInit {
     })
   }
 
+  searchDono(id: number){
+    this.PetsService.readDonoId(id).subscribe(dono=>{
+      this.dono = dono;
+      console.log(dono)
+      return dono;
+    })
+  }
 }

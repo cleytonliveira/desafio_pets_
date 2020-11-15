@@ -1,7 +1,10 @@
+import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PetsService } from './../pets.service';
-import { Pet } from './../pets-model';
+import { Pet, Raca, Especie } from './../pets-model';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Dono } from '../../donos/donos-model';
 
 @Component({
   selector: 'app-pets-update',
@@ -11,13 +14,30 @@ import { Component, OnInit } from '@angular/core';
 export class PetsUpdateComponent implements OnInit {
 
   pet: Pet;
-
-  constructor(private petService: PetsService, private router: Router, private route: ActivatedRoute) { }
+  formPet:FormGroup
+  racas: Observable <Raca[]>;
+  especies:Observable<Especie[]>;
+  donos:Observable<Dono[]>;
+  constructor(private petService: PetsService, private router: Router, private route: ActivatedRoute,private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.petService.readById(id).subscribe(pet => {
       this.pet = pet;
+    })
+    this.racas = this.petService.readRacas();
+    this.especies = this.petService.readEspecies();
+    this.donos = this.petService.readDonoList();
+    this.configForm();
+  }
+
+  configForm(){
+    this.formPet =  this.formBuilder.group({
+      Nome:[null,Validators.required],
+      Apelido:[null,Validators.required],
+      Raca:[null,Validators.required],
+      Especie:[null,Validators.required],
+      Dono:[null,Validators.required]
     })
   }
 

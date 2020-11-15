@@ -2,31 +2,34 @@
     <mat-card-title>
         Novo PET
     </mat-card-title>
-    <form>
+    <form [formGroup]="formPet">
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="pet.Nome" name="nome" required>
+            <input matInput placeholder="Nome" formControlName="Nome" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Apelido" [(ngModel)]="pet.Apelido" name="apelido" required>
+            <input matInput placeholder="Apelido" formControlName="Apelido" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Raça" [(ngModel)]="pet.Raca" name="raca" required>
+            <mat-select placeholder="Selecione a Raça" [attr.disabled]="state ? '' : null" formControlName="Raca">
+                <mat-option *ngFor="let raca of racas | async" [value]="raca.Nome">{{raca.Nome}}</mat-option>
+            </mat-select>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Espécie" [(ngModel)]="pet.Especie" name="especie" required>
+            <mat-select placeholder="Selecione a Espécie" [attr.disabled]="state ? '' : null" formControlName="Especie">
+                <mat-option *ngFor="let especie of especies | async" [value]="especie.Nome">{{especie.Nome}}</mat-option>
+            </mat-select>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Dono">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Telefone">
+            <mat-select placeholder="Selecione o Dono(a)" [attr.disabled]="state ? '' : null" formControlName="Dono">
+                <mat-option [value]=0 >Sem Dono</mat-option>
+                <mat-option *ngFor="let dono of donos | async" [value]="dono.id">{{dono.Nome}}</mat-option>
+            </mat-select>
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="createPet()" color="primary">
+    <button mat-raised-button (click)="createPet()" [disabled]="formPet.invalid" color="primary">
         Salvar
     </button>
-    <button mat-raised-button (click)="cancel()" >
+    <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
 </mat-card>
-
