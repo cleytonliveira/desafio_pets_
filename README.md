@@ -1,107 +1,63 @@
-# Desafio Frontend Backoffice Protheus 2020
-
-Olá! Seja bem vindo! Muito obrigado por querer fazer parte do nosso time! 
-
-Abaixo você encontrará as informações necessárias para realizar o desafio.
-
-## Importante!
-
-- A entrega poderá ser realizada através de um Pull Request ou enviando o projeto zipado para nairan.asilva[a]gmail.com;
-- Não esqueça do arquivo README explicando como devemos rodar o seu projeto;
-- Você poderá consultar o Google, Stackoverflow ou algum projeto particular na sua máquina;
-- Não fique preso a entregar todo o desafio e sim entregar com a melhor qualidade no prazo estipulado; 
-- Fique à vontade para perguntar qualquer coisa =)!
-- Boa sorte!
-
-## Setup do projeto
-
-- Angular CLI: 8+
-- Node: 10+
-- Angular: 8+
-
-## Como submeter?
-
-- Commite suas alterações de forma organizada;
-- Um dia antes da entrevista será dada permissão para fazer o push/ abrir a pull request, abra uma pull request da sua branch para a master com a nomenclatura: Nome Sobrenome - dd-mm-yy
-
-_Obs: Caso não tenha recebido permissão para realizar o push da branch entre em contato com o recrutador e envie seu usuário do GitHub_
-
-## Objetivo
-
-O objetivo desenvolver um controle de Pets e Donos.
-
-## Telas
-
-### Pets
-
-- O sistema deverá apresentar todos os pets cadastrados. Os campos apresentados serão:
-	1. Nome;
-	2. Apelido;
-	3. Raça;
-	4. Especíe:
-	5. Nome do Dono;
-	6. Telefone do Dono;
-
-- *Ações Disponíveis:* Possibilitar a manutenção de cadastros existentes e inclusão de novos registros;
-
-#### Regras-Pets
-- Todos os campos deverão ser preenchidos;
-- O Pet deverá ser vinculado a um dono;
-- Para alterções/deleções, o usuário precisará confirmar a operação;
-- As Raças e Especíes deverão ser campos do tipo compo, com informações já definidas;
-
-#### Visualizar Pets
-- O sistema deverá apresentar todos os dados dos Pets e do seu dono;
-
-### Donos
-
-- O sistema deverá apresentar todos os donos de pet cadastrados. Os campos apresentados serão:
-	1. Nome;
-	2. E-mail;
-	3. Telefone;
-
-- *Ações Disponíveis:* Possibilitar a manutenção de cadastros existentes e inclusão de novos registros;
-
-#### Regras-Dono
-- Todos os campos deverão ser preenchidos;
-- Para alterções/deleções, o usuário precisará confirmar a operação;
-
-#### Visualizar Pets
-- O sistema deverá apresentar todos os dados do seu dono e de todos os seus pets;
+# REQUERIMENTOS PARA RODAR O PROJETO
+npm 6 +  <a href="https://www.npmjs.com/"> Documentação NPM</a>
+Angular CLI: 8+  <a href="https://angular.io/"> Documentação ANGULAR</a>
+Node: 10+  <a href="https://nodejs.org/en/ ">Documentação NODE</a>
+Angular: 8+  
 
 
-## APIs
+# INSTALANDO ANGULAR VIA NPM (Comandos podem ser executados no BASH ou POWER SHELL)
+npm i -g @angular/cli
 
-**Pefixo**: https://5f779702d5c9cb001623760a.mockapi.io/api/v1
+# Dentro da pasta do projeto (frontend) rode:
+npm install 
 
-### Donos
-- **Get:** /owner
-- **Get ID:** /owner/{id}
-- **Get Pets:** /owner/{idOwner}/pets
-- **Post:** /owner/{id}
-- **Put:** /owner/{id}
-- **Delete:** /owner/{id}
+# Para rodar localmente
+npm start ou ng serve
 
-### Pets
-- **Get:** /pets
-- **Get ID:** /pets/{id}
-- **Post:** /pets/{id}
-- **Put:** /pets/{id}
-- **Delete:** /pets/{id}
+# ATIVIDADES EXECUTADAS
 
-#
+* PETS
+	- Cadastro
+	- Alteração
+	- Listagem
+	- Deleção (Com confirmação)
 
-## Diferenciais
-- Criar um processo de autenticação;
-- Design Responsivo;
-- Validação de formulários e máscaras;
-- Simular paginação e pesquisas;
-- Organização do Código e Commits;
-- Casos de Testes;
+* Donos
+	- Cadastro
+	- Alteração
+	- Listagem
+	- Deleção (Com confirmação)
 
+* Layout
+	- material - Utilizado para compor alguns elementos visuais
+	- Parcialmente responsivo - As tabelas ainda não ficaram como eu gostaria. 
 
-#
+* APIS
+	- Criadas no mockapi.io
+	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/pets
+	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/donos
+	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/especies
+	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/racas
 
-Caso tenha alguma sugestão de melhoria, nos avise!
+	- As chamadas estão respeitando a documentação inicial setada no projeto:
+* Donos
+	Get: /donos
+	Get ID: /donos/{id}
+	Post: /donos/{id}
+	Put: /donos/{id}
+	Delete: /donos/{id}
+* Pets
+	Get: /pets
+	Get ID: /pets/{id}
+	Post: /pets/{id}
+	Put: /pets/{id}
+	Delete: /pets/{id}
 
-Boa sorte! :blue_heart:
+# OBSERVAÇÕES
+
+Eu acabei não reparando que os padrões estavam em inglês no início e acabei misturando um pouco. 
+Tive algumas dificuldades com Angular porque é o primeiro projeto que faço do 0.
+
+No dia-a-dia uso mais o VUE.js, eles são parecidos, mas não exatamente iguais. 
+
+Por essa falta de conhecimento mais aprofundado acabei não utilizando as melhores práticas de reaproveitamento de código, mas está funcional no geral. 
