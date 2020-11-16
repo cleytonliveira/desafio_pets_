@@ -1,18 +1,18 @@
-# REQUERIMENTOS PARA RODAR O PROJETO
-npm 6 +  <a href="https://www.npmjs.com/"> Documentação NPM</a>
-Angular CLI: 8+  <a href="https://angular.io/"> Documentação ANGULAR</a>
-Node: 10+  <a href="https://nodejs.org/en/ ">Documentação NODE</a>
-Angular: 8+  
+* REQUERIMENTOS PARA RODAR O PROJETO
+- npm 6 +  <a href="https://www.npmjs.com/"> Documentação NPM</a>
+- Angular CLI: 8+  <a href="https://angular.io/"> Documentação ANGULAR</a>
+- Node: 10+  <a href="https://nodejs.org/en/ ">Documentação NODE</a>
+- Angular: 8+  
 
 
-# INSTALANDO ANGULAR VIA NPM (Comandos podem ser executados no BASH ou POWER SHELL)
-npm i -g @angular/cli
+* INSTALANDO ANGULAR VIA NPM (Comandos podem ser executados no BASH ou POWER SHELL)
+- npm i -g @angular/cli
 
-# Dentro da pasta do projeto (frontend) rode:
-npm install 
+* Dentro da pasta do projeto (frontend) rode:
+- npm install 
 
-# Para rodar localmente
-npm start ou ng serve
+* Para rodar localmente
+- npm start ou ng serve
 
 * ATIVIDADES EXECUTADAS
 
@@ -41,11 +41,11 @@ npm start ou ng serve
 
 	- As chamadas estão respeitando a documentação inicial setada no projeto:
 * Donos
-	Get: /donos
-	Get ID: /donos/{id}
-	Post: /donos/{id}
-	Put: /donos/{id}
-	Delete: /donos/{id}
+	- Get: /donos
+	- Get ID: /donos/{id}
+	- Post: /donos/{id}
+	- Put: /donos/{id}
+	- Delete: /donos/{id}
 * Pets
 	Get: /pets
 	Get ID: /pets/{id}
