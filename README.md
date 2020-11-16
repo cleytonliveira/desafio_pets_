@@ -14,7 +14,7 @@ npm install
 # Para rodar localmente
 npm start ou ng serve
 
-# ATIVIDADES EXECUTADAS
+* ATIVIDADES EXECUTADAS
 
 * PETS
 	- Cadastro
@@ -34,10 +34,10 @@ npm start ou ng serve
 
 * APIS
 	- Criadas no mockapi.io
-	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/pets
-	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/donos
-	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/especies
-	https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/racas
+	- https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/pets
+	- https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/donos
+	- https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/especies
+	- https://5fb1a48b87ed490016ea8046.mockapi.io/api/v1/racas
 
 	- As chamadas estão respeitando a documentação inicial setada no projeto:
 * Donos
